@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/addRecipe.css">
+  <script type="module" src="./js/common.js"></script>
+  <script type="module" src="./js/addRecipe.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+
+  <title>Add Recipe</title>
+  <!-- BEGIN INSTALLABLE APP-->
+  <link rel="manifest" href="./manifest.webmanifest" crossorigin="use-credentials" />
+  <meta name="theme-color" content="#252831">
+  <link rel="apple-touch-icon" href="./images/NutriTrack_192x192.png">
+  <link rel="icon" type="image/png" href="./images/NutriTrack_192x192.png">
+  <!-- END INSTALLABLE APP-->
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm flex-sm-nowrap flex-wrap">
+    <div class="container-fluid">
+      <button class="navbar-toggler flex-grow-sm-1 flex-grow-0 me-2" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbar5">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="/">NutriTrack</a>
+      <div class="justify-content-center navbar-collapse collapse" id="navbar5">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/addRecipe">Add Recipe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="outContainer card shadow justify-content-center width:50%">
+    <form class="needs-validation" novalidate>
+      <div class="container">
+        <div class="row">
+          <input type="text" placeholder="Recipe Name" id="recipeName" class="col-lg-9 col-12" required />
+          <div class="invalid-feedback">
+            Please choose a recipe name.
+          </div>
+        </div>
+      </div>
+      <h1>Macros</h1>
+      <div class="container">
+        <div class="row">
+          <input type="number" placeholder="Fat" id="fat" class="col-lg-9 col-12" required />
+          <div class="invalid-feedback">
+            Please enter a non-negative integer value.
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <input type="number" placeholder="Protein" id="protein" class="col-lg-9 col-12" required />
+          <div class="invalid-feedback">
+            Please enter a non-negative integer value.
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <input type="number" placeholder="Carbs" id="carbs" class="col-lg-9 col-12" required />
+          <div class="invalid-feedback">
+            Please enter a non-negative integer value.
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <input type="number" placeholder="Calories" id="calories" class="col-lg-9 col-12" required />
+          <div class="invalid-feedback">
+            Please enter a non-negative integer value.
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <button class="col-10 my-4" id="addRecipeBtn" type="button"> Add Recipe </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Offline Modal -->
+  <div class="modal fade" id="offlineModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">You're offline</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>The action you tried performing is currently unavailable. Please check your internet connection.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type="module" src="./js/common.js"></script>
+    <script type="module" src="./js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    </script>
+
+    <title>Dashboard</title>
+    <!-- BEGIN INSTALLABLE APP-->
+    <link rel="manifest" href="./manifest.webmanifest" crossorigin="use-credentials" />
+    <meta name="theme-color" content="#252831">
+    <link rel="apple-touch-icon" href="./images/NutriTrack_192x192.png">
+    <link rel="icon" type="image/png" href="./images/NutriTrack_192x192.png">
+    <!-- END INSTALLABLE APP-->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm flex-sm-nowrap flex-wrap">
+        <div class="container-fluid">
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar5">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/">NutriTrack</a>
+            <div class="justify-content-center navbar-collapse collapse" id="navbar5">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/addRecipe" id="addRecipeLink">Add Recipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="justify-content-center row">
+            <div class="recContainer shadow col-lg-4 card m-2">
+                <h1>Your Recipes:</h1>
+                <ul class="recipeList">
+                </ul>
+            </div>
+            <div class="consumptionContainer shadow col-lg-4 card m-2">
+                <h1>Today's Consumption:</h1>
+                <ul class="consumptionList">
+                </ul>
+            </div>
+            <div class="figure-container shadow col-lg-7 card m-2">
+                <div class="chart-container pb-3">
+                    <canvas id="distribution"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <figure class="figure4 shadow col-lg-6 card m-2">
+                <div class="chart-container"><canvas id="weeklyProtein"></canvas></div>
+            </figure>
+            <figure class="figure3 shadow col-lg-6 card m-2">
+                <div class="chart-container"><canvas id="weeklyCarbs"></canvas></div>
+            </figure>
+            <figure class="figure4 shadow col-lg-6 card m-2">
+                <div class="chart-container"><canvas id="weeklyFat"></canvas></div>
+            </figure>
+            <figure class="figure3 shadow col-lg-6 card m-2">
+                <div class="chart-container"><canvas id="weeklyCals"></canvas></div>
+            </figure>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="goals col-lg-6" id="protein-goal">
+
+            </div>
+            <div class="goals col-lg-5" id="cal-goal">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Offline Modal -->
+    <div class="modal fade" id="offlineModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">You're offline</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The action you tried performing is currently unavailable. Please check your internet connection.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

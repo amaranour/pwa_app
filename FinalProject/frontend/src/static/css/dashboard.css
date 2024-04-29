@@ -1,0 +1,88 @@
+nav {
+    background-color: #075874;
+}
+
+.nav-link {
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+body {
+    background-color: #e6e6e6;
+}
+
+.goals {
+    font-size: xx-large;
+}
+
+.figure3 {
+    background-color: white;
+}
+
+.figure4 {
+    background-color: white;
+}
+
+#weeklyProtein {
+    /* background-color: #FE6D8B; */
+    background-color: white;
+}
+
+#weeklyCarbs {
+    /* background-color: #036DD1; */
+    background-color: white;
+}
+
+#weeklyCals {
+    /* background-color: #C2EC08; */
+    background-color: white;
+}
+
+#weeklyFat {
+    /* background-color: #FEEB05; */
+    background-color: white;
+}
+
+#distribution {
+    background-color: white;
+
+}
+.figure-container {
+    background-color: white;
+}
+
+.goals {
+    /* background-color: white; */
+    margin-bottom: 30px
+}
+
+.recContainer {
+    background-color: #077459;
+    color: white;
+    min-height: 40vh;
+    font-size: x-large;
+}
+
+.consumptionContainer {
+    background-color: #072274;
+    color: white;
+    font-size: x-large;
+    min-height: 40vh;
+}
+
+.recContainer li:hover {
+    background-color: #0a8f6e;
+}
+
+.consumptionContainer li:hover {
+    background-color: #061d61;
+}
+
+nav a {
+    margin-left: 10px;
+    margin-right: 10px;
+
+}

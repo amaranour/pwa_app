@@ -1,0 +1,11 @@
+#offline {
+    position: absolute;
+    left:10%;
+    top: 25%;
+    font-size: 8vw;
+    color: white;
+}
+
+body {
+    background-color: maroon;
+}
